@@ -1,85 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internship Site</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Internship Site</title>
+  <style>
+    /* Reset and base styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      color: #333;
+    }
 
-        header {
-            background-color: #007BFF;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    /* Header styling */
+    header {
+      background-color: #007BFF;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
-        .logo {
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-        }
+    /* Logo styling */
+    .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      flex: 1 1 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-        nav {
-            display: flex;
-            gap: 25px;
-        }
+    /* Navigation styling */
+    nav {
+      display: flex;
+      gap: 25px;
+      flex: 1 1 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
 
-        nav a:hover {
-            color: #ffdd57;
-        }
+    nav a:hover {
+      color: #ffdd57;
+    }
 
-        main {
-            padding: 40px;
-            background-color: #f4f6f8;
-            min-height: 80vh;
-        }
+    /* Layout for wider screens */
+    @media (min-width: 600px) {
+      .logo {
+        flex: 0 0 auto;
+        text-align: left;
+        margin-bottom: 0;
+      }
+      nav {
+        flex: 0 0 auto;
+        justify-content: flex-end;
+        margin-bottom: 0;
+      }
+    }
 
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+    /* Main content styling */
+    main {
+      padding: 40px 20px;
+      min-height: 80vh;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <!-- Logo section -->
-        <div class="logo">Bentech IT Solutions</div>
+  <header>
+    <div class="logo">Bentech IT Solutions</div>
+    <nav>
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'services' %}">Services</a>
+      <a href="{% url 'program' %}">Programs</a>
+      <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+  </header>
 
-        <!-- Navigation links -->
-        <nav>
-            <a href="{% url 'home' %}">Home</a>
-            <a href="{% url 'about' %}">About</a>
-            <a href="{% url 'services' %}">Services</a>
-            <a href="{% url 'program' %}">Programs</a>
-            <a href="{% url 'contact' %}">Contact</a>
-        </nav>
-    </header>
+  <main>
+    {% block content %}
+    {% endblock content %}
+  </main>
 
-    <main>
-        {% block content %}
-        {% endblock content %}
-    </main>
-
-    <footer>
-        &copy; {{ year }} Internship Site. All rights reserved.
-    </footer>
+  <footer>
+    &copy; {{ year|default:"2025" }} Bentech IT Solutions. All rights reserved.
+  </footer>
 
 </body>
 </html>
