@@ -1,16 +1,46 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div style="padding: 20px;">
-  <h1>Our Services</h1>
-  <p>We offer a variety of services tailored to meet your needs and exceed your expectations. Here’s what we specialize in:</p>
+<div style="padding: 40px; background-color: #f4f6f8; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+  <h1 style="font-size: 36px; color: #2c3e50; text-align: center;">Our Services</h1>
+  <p style="max-width: 750px; margin: 20px auto; text-align: center; font-size: 18px; color: #555;">
+    We offer a variety of services tailored to meet your needs and exceed your expectations. From startups to large enterprises,
+    we provide flexible, innovative, and future-focused digital solutions.
+  </p>
 
-  <ul style="margin-top: 15px; padding-left: 20px;">
-    <li>Web Design & Development</li>
-    <li>Digital Marketing</li>
-    <li>IT Consulting & Security</li>
-    <li>Data Analysis & Reporting</li>
-    <li>Graphic Design Services</li>
-  </ul>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px;">
+
+    <div style="background-color: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <h2 style="color: #007BFF;">Web Design & Development</h2>
+      <p style="color: #444;">We craft responsive, user-friendly websites tailored to your brand identity. From personal blogs to e-commerce platforms, we build for performance and scalability.</p>
+    </div>
+
+    <div style="background-color: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <h2 style="color: #007BFF;">Digital Marketing</h2>
+      <p style="color: #444;">Grow your reach with our SEO, content marketing, email campaigns, and social media strategies. We help you connect, engage, and convert.</p>
+    </div>
+
+    <div style="background-color: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <h2 style="color: #007BFF;">IT Consulting & Security</h2>
+      <p style="color: #444;">Get expert guidance on digital transformation, infrastructure setup, cloud solutions, and cybersecurity protocols to protect your assets.</p>
+    </div>
+
+    <div style="background-color: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <h2 style="color: #007BFF;">Data Analysis & Reporting</h2>
+      <p style="color: #444;">We transform your raw data into powerful insights through visualization dashboards, performance reports, and actionable recommendations.</p>
+    </div>
+
+    <div style="background-color: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <h2 style="color: #007BFF;">Graphic Design Services</h2>
+      <p style="color: #444;">Stand out with custom designs for branding, flyers, banners, and digital content. We blend creativity with your message to leave a lasting impression.</p>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 50px;">
+    <a href="/contact" style="padding: 12px 25px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 6px; font-size: 16px;">
+      Get a Quote Today
+    </a>
+  </div>
 </div>
 {% endblock content %}

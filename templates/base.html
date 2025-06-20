@@ -4,18 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internship Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007BFF;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffdd57;
+        }
+
+        main {
+            padding: 40px;
+            background-color: #f4f6f8;
+            min-height: 80vh;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    <head>
-        <a href="{% url 'home'%}">Home</a>
-        <a href="{% url 'about'%}">About</a>
-        <a href="{% url 'services'%}">services</a>
-        <a href="{% url 'program'%}">program</a>
-    <a href="{% url 'contact'%}">contact</a>
-    </head>
 
-    {% block content %}
+    <header>
+        <!-- Logo section -->
+        <div class="logo">Bentech T Solutions</div>
 
-    {% endblock content%}
+        <!-- Navigation links -->
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'services' %}">Services</a>
+            <a href="{% url 'program' %}">Programs</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    <footer>
+        &copy; {{ year }} Internship Site. All rights reserved.
+    </footer>
+
 </body>
 </html>

@@ -1,10 +1,44 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div style="padding: 20px;">
-  <h1>About Us</h1>
-  <p>
-    Welcome to our website! We are passionate about delivering value through quality services and innovative solutions. Our goal is to meet your needs with professionalism and excellence.
+<div style="padding: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; color: #333;">
+
+  <h1 style="font-size: 36px; color: #2c3e50; text-align: center;">About Us</h1>
+
+  <p style="max-width: 800px; margin: 20px auto; font-size: 18px; line-height: 1.6; text-align: center;">
+    Welcome to our website! We are passionate about delivering value through quality services and innovative solutions.
+    Our mission is to empower individuals and organizations with the tools and knowledge they need to succeed in a fast-paced digital world.
   </p>
+
+  <div style="margin-top: 50px; display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+
+    <div style="background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 300px;">
+      <h3 style="color: #007BFF;">🌍 Our Vision</h3>
+      <p>To become a trusted hub for digital innovation, growth, and transformation across Africa and beyond.</p>
+    </div>
+
+    <div style="background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 300px;">
+      <h3 style="color: #007BFF;">💡 Our Mission</h3>
+      <p>To deliver high-quality, affordable tech-driven solutions that solve real-world problems and improve lives.</p>
+    </div>
+
+    <div style="background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 300px;">
+      <h3 style="color: #007BFF;">🤝 Our Values</h3>
+      <ul style="padding-left: 20px;">
+        <li>Integrity</li>
+        <li>Creativity</li>
+        <li>Collaboration</li>
+        <li>Excellence</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 60px;">
+    <a href="{% url 'contact' %}" style="padding: 12px 25px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 6px; font-size: 16px;">
+      Get in Touch
+    </a>
+  </div>
+
 </div>
 {% endblock content %}

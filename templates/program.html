@@ -1,15 +1,41 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div style="padding: 20px;">
-  <h1>Our Programs</h1>
-  <p>We offer a range of programs designed to empower individuals and organizations through skills development, training, and innovation.</p>
+<div style="padding: 40px; font-family: Arial, sans-serif; background-color: #f9f9f9;">
+  <h1 style="font-size: 36px; color: #333; text-align: center;">Our Programs</h1>
+  <p style="text-align: center; max-width: 700px; margin: 20px auto; font-size: 18px; color: #555;">
+    At Bentech, we’re committed to equipping individuals and communities with the right tools to thrive in the digital era.
+    Explore our core programs designed to deliver real-world impact.
+  </p>
 
-  <ul style="margin-top: 20px; padding-left: 20px;">
-    <li>Technology Bootcamps</li>
-    <li>Business Development Workshops</li>
-    <li>Community Outreach Initiatives</li>
-    <li>Student Internship Placements</li>
-  </ul>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+
+    <div style="background-color: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <h2 style="color: #2b6cb0;">Technology Bootcamps</h2>
+      <p style="color: #444;">Hands-on training in coding, cybersecurity, data analysis, and cloud technologies. Perfect for students, job seekers, and career switchers.</p>
+    </div>
+
+    <div style="background-color: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <h2 style="color: #2b6cb0;">Business Development Workshops</h2>
+      <p style="color: #444;">Practical sessions on marketing, finance, branding, and growth strategies for startups, SMEs, and solo entrepreneurs.</p>
+    </div>
+
+    <div style="background-color: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <h2 style="color: #2b6cb0;">Community Outreach Initiatives</h2>
+      <p style="color: #444;">Programs focused on digital literacy, innovation hubs in rural areas, and mentorship programs to uplift underserved communities.</p>
+    </div>
+
+    <div style="background-color: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <h2 style="color: #2b6cb0;">Student Internship Placements</h2>
+      <p style="color: #444;">Linking students to reputable companies for hands-on industry experience in IT, business, media, and engineering fields.</p>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 60px;">
+    <a href="/contact" style="padding: 12px 25px; background-color: #2b6cb0; color: white; text-decoration: none; border-radius: 6px; font-size: 16px;">
+      Contact Us to Join
+    </a>
+  </div>
 </div>
 {% endblock content %}

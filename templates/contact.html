@@ -1,7 +1,44 @@
 {% extends 'base.html' %}
 
-{% block content%}
+{% block content %}
+<div style="padding: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f5f7fa;">
 
-<h1>contact</h1>
+  <h1 style="text-align: center; font-size: 36px; color: #2c3e50;">Contact Us</h1>
+  <p style="text-align: center; font-size: 18px; color: #555; max-width: 700px; margin: 10px auto 30px;">
+    We'd love to hear from you! Whether you have a question, want to start a project, or just want to say hello — reach out using the info below or the form.
+  </p>
 
-{% endblock content%}
+  <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+
+    <div style="flex: 1; min-width: 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <h3 style="color: #007BFF;">📍 Address</h3>
+      <p>Mbarara, Mbarara City, UG</p>
+
+      <h3 style="color: #007BFF;">📞 Phone</h3>
+      <p>+256 761214808</p>
+
+      <h3 style="color: #007BFF;">📧 Email</h3>
+      <p>info@bentech.com</p>
+    </div>
+
+    <div style="flex: 1; min-width: 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <form method="POST" action="{% url 'contact' %}">
+        {% csrf_token %}
+        <label style="display: block; margin-bottom: 10px; font-weight: bold;">Your Name</label>
+        <input type="text" name="name" style="width: 100%; padding: 10px; margin-bottom: 20px;" required>
+
+        <label style="display: block; margin-bottom: 10px; font-weight: bold;">Email</label>
+        <input type="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 20px;" required>
+
+        <label style="display: block; margin-bottom: 10px; font-weight: bold;">Message</label>
+        <textarea name="message" rows="5" style="width: 100%; padding: 10px; margin-bottom: 20px;" required></textarea>
+
+        <button type="submit" style="background-color: #007BFF; color: white; padding: 12px 20px; border: none; border-radius: 6px; font-size: 16px;">
+          Send Message
+        </button>
+      </form>
+    </div>
+
+  </div>
+</div>
+{% endblock content %}
