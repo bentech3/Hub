@@ -1,17 +1,55 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div style="padding: 60px 20px; background: linear-gradient(to right, #f0f4f8, #ffffff); text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+<div style="padding: 80px 20px; background: linear-gradient(to right, #f0f4f8, #ffffff); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center;">
 
-  <h1 style="font-size: 48px; color: #2c3e50; margin-bottom: 20px;">Welcome to Our Homepage</h1>
+  <!-- Hero Heading -->
+  <h1 style="font-size: 48px; color: #2c3e50; font-weight: 700; margin-bottom: 20px;">
+    Welcome to <span style="color: #007BFF;">Bentech IT Solutions</span>
+  </h1>
 
-  <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
-    We’re glad you’re here! Discover our wide range of services, learn more about our impact, and feel free to reach out — we’re ready to help you grow.
+  <!-- Subheading -->
+  <p style="font-size: 20px; color: #555; max-width: 780px; margin: 0 auto; line-height: 1.7;">
+    We help individuals, startups, and organizations unlock their potential through digital transformation, cutting-edge technology, and impactful training programs.
   </p>
 
-  <a href="{% url 'contact' %}" style="display: inline-block; margin-top: 35px; padding: 14px 30px; background-color: #007BFF; color: #fff; text-decoration: none; font-size: 18px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: background 0.3s;">
-    Contact Us
+  <!-- CTA Button -->
+  <a href="{% url 'contact' %}" 
+     style="display: inline-block; margin-top: 40px; padding: 16px 36px; background-color: #007BFF; color: white; text-decoration: none; font-size: 18px; font-weight: 500; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,123,255,0.25); transition: background-color 0.3s;"
+     onmouseover="this.style.backgroundColor='#0056b3';"
+     onmouseout="this.style.backgroundColor='#007BFF';">
+    Get Started Today
   </a>
+
+  <!-- Decorative divider -->
+  <div style="margin-top: 60px; height: 2px; background: #ddd; width: 120px; margin-left: auto; margin-right: auto;"></div>
+
+  <!-- Optional Preview Teaser Section -->
+  <div style="margin-top: 50px;">
+    <h2 style="font-size: 32px; color: #2c3e50;">What We Offer</h2>
+    <p style="font-size: 18px; color: #666; max-width: 700px; margin: 15px auto;">
+      From website design and software development to IT consulting and digital marketing — explore how Bentech can help your brand grow.
+    </p>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+
+      <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.05); width: 280px;">
+        <h3 style="color: #007BFF;">🔧 Web Development</h3>
+        <p style="color: #444;">Clean, responsive, and fast websites tailored to your goals.</p>
+      </div>
+
+      <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.05); width: 280px;">
+        <h3 style="color: #007BFF;">📈 Digital Marketing</h3>
+        <p style="color: #444;">SEO, content creation, and ads to boost your reach online.</p>
+      </div>
+
+      <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.05); width: 280px;">
+        <h3 style="color: #007BFF;">🎓 Tech Training</h3>
+        <p style="color: #444;">Empowering you with practical skills for today’s tech world.</p>
+      </div>
+
+    </div>
+  </div>
 
 </div>
 {% endblock content %}

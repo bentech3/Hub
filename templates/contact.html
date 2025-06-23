@@ -19,26 +19,51 @@
 
       <h3 style="color: #007BFF;">📧 Email</h3>
       <p>info@bentech.com</p>
+
+      <!-- ✅ New addition -->
+      <div style="margin-top: 20px;">
+        <h3 style="color: #007BFF;">⏰ Working Hours</h3>
+        <p>Mon - Fri: 8:00 AM – 6:00 PM<br>Saturday: 9:00 AM – 2:00 PM</p>
+      </div>
+
+      <!-- ✅ New: embedded map link -->
+      <div style="margin-top: 20px;">
+        <a href="https://www.google.com/maps/place/Mbarara" target="_blank" style="color: #007BFF; text-decoration: underline;">
+          View Location on Map →
+        </a>
+      </div>
     </div>
 
     <div style="flex: 1; min-width: 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
       <form method="POST" action="{% url 'contact' %}">
         {% csrf_token %}
         <label style="display: block; margin-bottom: 10px; font-weight: bold;">Your Name</label>
-        <input type="text" name="name" style="width: 100%; padding: 10px; margin-bottom: 20px;" required>
+        <input type="text" name="name" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;" required>
 
         <label style="display: block; margin-bottom: 10px; font-weight: bold;">Email</label>
-        <input type="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 20px;" required>
+        <input type="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;" required>
 
         <label style="display: block; margin-bottom: 10px; font-weight: bold;">Message</label>
-        <textarea name="message" rows="5" style="width: 100%; padding: 10px; margin-bottom: 20px;" required></textarea>
+        <textarea name="message" rows="5" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;" required></textarea>
 
-        <button type="submit" style="background-color: #007BFF; color: white; padding: 12px 20px; border: none; border-radius: 6px; font-size: 16px;">
+        <button type="submit" style="background-color: #007BFF; color: white; padding: 12px 20px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">
           Send Message
         </button>
       </form>
     </div>
 
   </div>
+
+  <!-- ✅ New social media section -->
+  <div style="margin-top: 50px; text-align: center;">
+    <h3 style="color: #2c3e50;">Follow Us</h3>
+    <p style="color: #555;">Stay connected on social platforms</p>
+    <div style="margin-top: 10px;">
+      <a href="#" style="margin: 0 10px; color: #007BFF; text-decoration: none;">Facebook</a>
+      <a href="#" style="margin: 0 10px; color: #007BFF; text-decoration: none;">Twitter</a>
+      <a href="#" style="margin: 0 10px; color: #007BFF; text-decoration: none;">LinkedIn</a>
+    </div>
+  </div>
+
 </div>
 {% endblock content %}

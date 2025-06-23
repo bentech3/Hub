@@ -1,42 +1,50 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div style="padding: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; color: #333;">
+<div style="padding: 60px 20px; background: linear-gradient(to right, #f0f4f8, #ffffff); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333;">
 
-  <h1 style="font-size: 36px; color: #2c3e50; text-align: center;">About Us</h1>
+  <h1 style="text-align: center; font-size: 42px; font-weight: 600; color: #2c3e50; margin-bottom: 20px;">
+    Who We Are
+  </h1>
 
-  <p style="max-width: 800px; margin: 20px auto; font-size: 18px; line-height: 1.6; text-align: center;">
-    Welcome to our website! We are passionate about delivering value through quality services and innovative solutions.
-    Our mission is to empower individuals and organizations with the tools and knowledge they need to succeed in a fast-paced digital world.
+  <p style="max-width: 800px; margin: 0 auto 50px auto; font-size: 18px; text-align: center; line-height: 1.7; color: #555;">
+    At Bentech IT Solutions, we’re more than a tech company. We’re innovators, educators, and problem-solvers passionate about building a better future through digital solutions.
   </p>
 
-  <div style="margin-top: 50px; display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
 
-    <div style="background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 300px;">
-      <h3 style="color: #007BFF;">🌍 Our Vision</h3>
-      <p>To become a trusted hub for digital innovation, growth, and transformation across Africa and beyond.</p>
+    <div style="background-color: #fff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.07); padding: 30px; max-width: 320px; transition: transform 0.3s ease;">
+      <h3 style="color: #007BFF; font-size: 20px;">🌍 Our Vision</h3>
+      <p style="margin-top: 12px; line-height: 1.6;">
+        To be Africa’s digital innovation hub — driving impact through creativity, tech, and training.
+      </p>
     </div>
 
-    <div style="background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 300px;">
-      <h3 style="color: #007BFF;">💡 Our Mission</h3>
-      <p>To deliver high-quality, affordable tech-driven solutions that solve real-world problems and improve lives.</p>
+    <div style="background-color: #fff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.07); padding: 30px; max-width: 320px; transition: transform 0.3s ease;">
+      <h3 style="color: #007BFF; font-size: 20px;">💡 Our Mission</h3>
+      <p style="margin-top: 12px; line-height: 1.6;">
+        To deliver smart, affordable tech solutions and equip individuals with practical digital skills.
+      </p>
     </div>
 
-    <div style="background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 300px;">
-      <h3 style="color: #007BFF;">🤝 Our Values</h3>
-      <ul style="padding-left: 20px;">
+    <div style="background-color: #fff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.07); padding: 30px; max-width: 320px; transition: transform 0.3s ease;">
+      <h3 style="color: #007BFF; font-size: 20px;">🤝 Our Values</h3>
+      <ul style="padding-left: 20px; line-height: 1.8; margin-top: 12px;">
         <li>Integrity</li>
-        <li>Creativity</li>
-        <li>Collaboration</li>
+        <li>Innovation</li>
         <li>Excellence</li>
+        <li>People First</li>
       </ul>
     </div>
 
   </div>
 
   <div style="text-align: center; margin-top: 60px;">
-    <a href="{% url 'contact' %}" style="padding: 12px 25px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 6px; font-size: 16px;">
-      Get in Touch
+    <a href="{% url 'contact' %}" 
+       style="padding: 14px 28px; background-color: #007BFF; color: white; font-size: 17px; border-radius: 8px; text-decoration: none; box-shadow: 0 6px 15px rgba(0,123,255,0.3); transition: background-color 0.3s ease;"
+       onmouseover="this.style.backgroundColor='#0056b3';"
+       onmouseout="this.style.backgroundColor='#007BFF';">
+      Let's Work Together
     </a>
   </div>
 
