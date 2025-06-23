@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import HomepageContent, AboutInfo, Service, Program, ContactMessage
 
-# Register your models here.
+admin.site.register(HomepageContent)
+admin.site.register(AboutInfo)
+admin.site.register(Service)
+admin.site.register(Program)
+admin.site.register(ContactMessage)

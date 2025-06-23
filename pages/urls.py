@@ -1,14 +1,11 @@
 from django.urls import path
-from .views import (
-    HomePageView, AboutPageView, ServicesPageView,
-    BlogPageView, ContactPageView, ProgramPageView
-)
+from . import views  # ← import all your views from views.py
 
 urlpatterns = [
-    path('', HomePageView.as_view(), name='home'),
-    path('about/', AboutPageView.as_view(), name='about'),
-    path('services/', ServicesPageView.as_view(), name='services'),
-    path('blog/', BlogPageView.as_view(), name='blog'),
-    path('contact/', ContactPageView.as_view(), name='contact'),
-    path('program/', ProgramPageView.as_view(), name='program'),
+    path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
+    path('services/', views.services, name='services'),
+    path('blog/', views.blog, name='blog'),
+    path('contact/', views.contact, name='contact'),
+    path('program/', views.program, name='program'),
 ]

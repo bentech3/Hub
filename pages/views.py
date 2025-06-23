@@ -1,22 +1,24 @@
 from django.shortcuts import render
+from .models import HomepageContent, AboutInfo, Service, Program
 
-from django.views.generic import TemplateView
+def home(request):
+    content = HomepageContent.objects.first()
+    return render(request, "home.html", {"content": content})
 
-class HomePageView(TemplateView):
-    template_name = "home.html"
+def about(request):
+    about_info = AboutInfo.objects.first()
+    return render(request, "about.html", {"about_info": about_info})
 
-class AboutPageView(TemplateView):
-    template_name = "about.html"
+def services(request):
+    services = Service.objects.all()
+    return render(request, "services.html", {"services": services})
 
-class ServicesPageView(TemplateView):
-    template_name = "services.html"
+def program(request):
+    programs = Program.objects.all()
+    return render(request, "program.html", {"programs": programs})
 
-class BlogPageView(TemplateView):
-    template_name = "blog.html"
+def contact(request):
+    return render(request, "contact.html")
 
-class ContactPageView(TemplateView):
-    template_name = "contact.html"
-
-class ProgramPageView(TemplateView):
-    template_name = "program.html"
-
+def blog(request):
+    return render(request, "blog.html")
